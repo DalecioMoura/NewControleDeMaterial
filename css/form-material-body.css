@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Formatação do section*/
+#div-principal{
+    max-width: 400px;
+    min-width: 200px;
+    border: solid 3px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+#div-form{
+    text-align: center;
+}
+#div-form h1{
+    text-align: center;
+    margin: 0 auto;
+}
+form{
+
+    text-align: right;
+    
+}
+table{
+    width: 100%;
+    
+}
+
+.th-col1,
+.td-col2{
+    min-height: 25px;
+}
+.th-col1{
+    width: 20%;/*90px;*/
+    text-align: left;
+}
+.td-col2{
+    display: flex;
+    width: 100%;/*300px;*/
+}
+.td-col2 input{
+    width: 100%;
+    text-align: center;
+}
+.td-col2 textarea{
+    min-width: 99%;
+    width: 100%;
+    min-height: 30px;
+    text-align: center;
+}
+#id-input-enviar{
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-weight: bold;
+}

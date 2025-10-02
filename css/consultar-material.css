@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Formatação do header*/
+header{
+    width: 100%;
+    text-align: center;
+    background-color:aquamarine;
+    margin-bottom: 10px;
+}
+#header-div1{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: solid 4px;
+    background-color:aquamarine;
+    padding: 10px;
+}
+#header-div1 h1{
+    margin: auto;
+    text-align: center;
+}
+#index-header-div1 img{
+
+}
+#header-div2{
+    text-align: center;
+    background-color:aqua;
+    padding: 10px;
+    border-bottom: solid 2px;
+   
+}
+#header-div2 button{
+    margin: 4px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}

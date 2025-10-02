@@ -1,0 +1,102 @@
+.main-content {
+    margin-left: 250px;
+    padding: 30px;
+    flex-grow: 1;
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar.closed ~ .main-content {
+    margin-left: 70px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #555;
+    font-weight: 500;
+}
+.user-profile i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.content-header h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--card-background);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.card ul {
+    list-style: none;
+}
+
+.card ul li {
+    padding: 5px 0;
+    color: #555;
+}
+
+.card ul li i {
+    color: #ccc;
+    margin-right: 8px;
+}
+
+.card.alert {
+    border-left: 4px solid #e74c3c;
+}
+
+.card.alert i {
+    color: #e74c3c;
+}
+
+.quick-link-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--hover-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.quick-link-btn:hover {
+    background-color: #2374b1;
+}
+
+@media (max-width: 768px) {
+    
+    .main-content {
+        margin-left: 70px;
+    }
+    .sidebar.closed ~ .main-content {
+        margin-left: 250px;
+    }
+}

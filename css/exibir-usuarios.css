@@ -1,0 +1,46 @@
+#section-exibir-usuarios{
+    width: 100%;
+    display: '';
+    text-align: center;
+}
+
+#exibir-usuarios-div-principal{
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+#exibir-usuarios-div-principal h2{
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.cabecalho,
+.linhas{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3px;
+}
+.cabecalho{
+    border-bottom: solid 3px;
+    margin-bottom: px;
+    padding: 5px;
+}
+.linhas{
+    border-bottom: solid 1px;
+}
+.col,
+.linha{
+    display: inline-block;
+    width: 15%;
+    margin: 2px auto;
+    justify-content: left;
+}
+#id-linha,
+#id-col{
+    width: 3%;
+}
+
+#btn-novo-evento{
+
+margin-top: 20px;
+padding: 10px 15px;
+}

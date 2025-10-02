@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Formatação do header*/
+header{
+    width: 100%;
+    text-align: center;
+    background-color:aquamarine;
+    margin-bottom: 10px;
+}
+#header-div1{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: solid 4px;
+    background-color:aquamarine;
+    padding: 10px;
+}
+#header-div1 h1{
+    margin: auto;
+    text-align: center;
+}
+#header-div1 img{
+
+}
+#header-div2{
+    text-align: center;
+    background-color:aqua;
+    padding: 10px;
+    border-bottom: solid 2px;
+   
+}
+#header-div2 button{
+    margin: 4px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#div-principal{
+    width: 400px;
+    border: solid 3px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#div-form{
+    text-align: center;
+}
+#div-form h1{
+    text-align: center;
+    margin: 0 auto;
+}
+form{
+
+    text-align: right;
+    
+}
+form table{
+    
+    
+}
+
+.th-col1,
+.td-col2{
+    min-height: 25px;
+}
+.th-col1{
+    min-width: 90px;
+    text-align: left;
+}
+.td-col2{
+    display: flex;
+    width: 300px;
+}
+.td-col2 input{
+    width: 100%;
+    text-align: center;
+}
+.td-col2 textarea{
+    min-width: 99%;
+    width: 100%;
+    min-height: 30px;
+    text-align: center;
+}
+#id-input-enviar{
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-weight: bold;
+}
