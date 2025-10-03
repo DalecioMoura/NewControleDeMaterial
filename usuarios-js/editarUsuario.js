@@ -39,12 +39,12 @@ async function buscarDados(filtro){
     console.log('filtroJson: ',filtroJson);
     console.log('urlParams: ',urlParams.toString());
 
-    const req = await fetch(`http://localhost:3000/api/usuario?${urlParams.toString()}`, {
+    const req = await fetch(`https://backendcomautenticacao.onrender.com/api/usuario?${urlParams.toString()}`, {
         method: 'GET',
         headers:{"Content-Type": "application/json",
                 'Authorization': `Bearer ${sessionStorage.getItem('token')}`
         }
-    });//(`https://apicontroledematerial.onrender.com/api/usuario/${filtroJson}`);
+    });
     const res = await req.json();
    
     console.log('res.result: ',res.result[0]);
@@ -96,7 +96,7 @@ async function editarDados(){
     
     let dadosJson = JSON.stringify(dados);
 
-    const req = await fetch(`http://localhost:3000/api/usuario/${id}`,{//(`https://apicontroledematerial.onrender.com/api/usuario/${id}`,{
+    const req = await fetch(`https://backendcomautenticacao.onrender.com/api/usuario/${id}`,{
         method:'PUT',
         headers:{"Content-Type":'application/json',
                 'Authorization': `Bearer ${sessionStorage.getItem('token')}`

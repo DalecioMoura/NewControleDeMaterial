@@ -46,12 +46,12 @@ async function buscarDadosParaEdicao(){
         return;
     }
 
-    const req   = await fetch(`http://localhost:3000/api/item?${paramUrl.toString()}`, {
+    const req   = await fetch(`https://backendcomautenticacao.onrender.com/api/item?${paramUrl.toString()}`, {
         method: 'GET',
         headers:{"Content-Type": "application/jason",
             'Authorization': `Bearer ${sessionStorage.getItem('token')}`
         }
-    });//(`https://apicontroledematerial.onrender.com/api/item/${paramUrl.toString()}`);
+    });
     const res   = await req.json();
     
     let elementos        = document.querySelectorAll('.ocultar');
@@ -94,7 +94,7 @@ async function enviarDadosEditados(){
 
     let dadosJSON = JSON.stringify(dados);
 
-    const req = await fetch(`http://localhost:3000/api/item/${id}`,{//(`https://apicontroledematerial.onrender.com/api/item/${id}`,{
+    const req = await fetch(`https://backendcomautenticacao.onrender.com/api/item/${id}`,{
        method: "PUT",
        headers:{"Content-Type": "application/json",
         'Authorization': `Bearer ${sessionStorage.getItem('token')}`

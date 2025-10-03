@@ -41,7 +41,7 @@ async function buscarUsuario(filtro){
     
     const token = sessionStorage.getItem('token');
     
-    const req = await fetch(`http://localhost:3000/api/usuario?${urlParams.toString()}`,{//(`https://apicontroledematerial.onrender.com/api/usuario/${filtroJson}`,{
+    const req = await fetch(`https://backendcomautenticacao.onrender.com/api/usuario?${urlParams.toString()}`,{
         method: 'GET',
         headers:{
             "Content-Type": "application/json",
@@ -86,12 +86,12 @@ async function excluir(){
     if(!token){
         alert('Sessão expirada! Faça o login novamente.');
         sessionStorage.clear();
-        window.location.href = '../index.html';  
+        window.location.href = '../index.html';
         return;
     }
  
     if(id){
-        const req = await fetch(`http://localhost:3000/api/usuario/${id}`,{
+        const req = await fetch(`https://backendcomautenticacao.onrender.com/api/usuario/${id}`,{
             method:"DELETE",
             headers:{
                 "Content-Type":"application/json",

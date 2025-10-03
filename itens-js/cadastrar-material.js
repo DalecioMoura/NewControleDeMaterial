@@ -11,7 +11,6 @@ async function cadastarMaterial(){
 
    if(isLogado){
 
-      //let dados = pegaForm();
       let codigo = document.getElementById('id-codigo').value;
       let tipo = document.getElementById('id-tipo').value;
       let local = document.getElementById('id-local').value.toUpperCase();
@@ -39,11 +38,9 @@ async function cadastarMaterial(){
          "status"       :{"st":"Disponível", "nome":"", "matricula":"", "destino":"", "data":""}
       }
 
-      //let filtro = {"filtro":Object.keys(dados)[0], "valor":dados.codigo};
-      //console.log('filtro: ',filtro);
       const urlParams = new URLSearchParams({"filtro":'codigo', "valor":dados.codigo});
 
-      const req = await fetch(`http://localhost:3000/api/item?${urlParams.toString()}`, {//https://apicontroledematerial.onrender.com/
+      const req = await fetch(`https://apicontroledematerial.onrender.com/api/item?${urlParams.toString()}`, {//http://localhost:3000/
          method: 'GET',
          headers:{"Content-Type": "application/json",
                   "Authorization": `Bearer ${sessionStorage.getItem('token')}`
@@ -59,7 +56,7 @@ async function cadastarMaterial(){
       else{
          let dadosJSON = JSON.stringify(dados);
 
-         const req = await fetch('http://localhost:3000/api/item',{//https://apicontroledematerial.onrender.com/
+         const req = await fetch('https://apicontroledematerial.onrender.com/api/item',{//http://localhost:3000/
             method: "POST",
             headers:{"Content-Type": "application/json",
                      "Authorization": `Bearer ${sessionStorage.getItem('token')}`
@@ -125,14 +122,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const btnCadastrar = document.getElementById('id-input-enviar');
       btnCadastrar.value = 'Cadastrar';
 
-      //const btnCadastar = document.getElementById('id-input-enviar');
       btnCadastrar.addEventListener('click', cadastarMaterial);
 
       const btnInicializar = document.getElementById('user-profile');
     if(btnInicializar){
         btnInicializar.addEventListener('click', () => {inicializar(); });
     }
-
 });
 
 

@@ -50,7 +50,7 @@ function consultarMaterial(){
 
     const urlParams = new URLSearchParams(dado);
     
-    const req = await fetch(`http://localhost:3000/api/item?${urlParams.toString()}`, { //(`https://apicontroledematerial.onrender.com/api/item?${urlParams.toString()}`, {
+    const req = await fetch(`https://backendcomautenticacao.onrender.com/api/item?${urlParams.toString()}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -62,17 +62,16 @@ function consultarMaterial(){
     exibirLista(res.result, 'Nova Pesquisa');
     }
 
-
  async function semFiltro(){
     console.log('sem filtro');
-    const req = await fetch(`http://localhost:3000/api/itens`, { //('https://apicontroledematerial.onrender.com/api/itens', {
+    const req = await fetch(`https://backendcomautenticacao.onrender.com/api/itens`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${sessionStorage.getItem('token')}` 
         }
                
-    });//('https://apicontroledematerial.onrender.com/api/itens');
+    });
     const res = await req.json();
     console.log('res: ',res);
     exibirLista(res.result, 'Nova Pesquisa');
@@ -122,29 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnInicializar = document.getElementById('user-profile');
     if(btnInicializar){
         btnInicializar.addEventListener('click', () => {inicializar(); });
-    }
-    
-    // Obtém os parâmetros da URL atual
-    const urlParams = new URLSearchParams(window.location.search);
-    
-    // Pega os valores 'filtro' e 'valor'
-    const filtro = urlParams.get('filtro');
-    const valor = urlParams.get('valor');
-    
-    // Se ambos os parâmetros existirem na URL...
-    if (filtro && valor) {
-        console.log("Parâmetros encontrados na URL. Executando a pesquisa automática.");
-        console.log("filtro: "+filtro);
-        console.log("valor: "+valor);
-        
-        // Cria o objeto 'dado' que sua função já espera
-        const dado = {
-            filtro: filtro,
-            valor: valor
-        };
-        
-        // Chama a sua função de pesquisa que já funciona
-        comFiltro(dado);
     }
 });
 

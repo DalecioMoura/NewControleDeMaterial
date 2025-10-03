@@ -1,20 +1,4 @@
 
-
-/*function inicializar(){
-
-    const isLogado = sessionStorage.getItem('token') !== null;
-
-    if(isLogado){
-
-        console.log('Usuário já está logado!');
-        //usuarioJaLogado();
-    }
-    else{
-        console.log('Usuário não está logado!');
-        //usuarioNaoLogado();
-    }
-}*/
-
 function inicializar(){
 
     const isLogado = sessionStorage.getItem('token') !== null;
@@ -52,11 +36,11 @@ async function fazerLogin(){
     console.log('Dados enviados: ',{email, senha});
 
     try {
-        const req = await fetch(`http://localhost:3000/api/login`,{
+        const req = await fetch(`https://backendcomautenticacao.onrender.com/api/login`,{
             method: 'POST',
             headers:{"Content-Type": "application/json"},
             body: JSON.stringify({email, senha})
-        });//(`https://apicontroledematerial.onrender.com/api/usuario/${filtroJson}`);
+        });
 
         const res = await req.json();
 

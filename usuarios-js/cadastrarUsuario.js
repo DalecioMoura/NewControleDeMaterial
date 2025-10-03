@@ -15,7 +15,7 @@ async function cadastrarUsuario(){
         console.log(dados);
         console.log(dadosJson);
 
-        const req = await fetch('http://localhost:3000/api/register',{ //https://apicontroledematerial.onrender.com/api/usuario
+        const req = await fetch('https://backendcomautenticacao.onrender.com/api/register',{
             method: 'POST',
             headers:{"Content-Type": "application/json"},
             body: dadosJson

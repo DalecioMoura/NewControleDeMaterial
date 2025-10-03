@@ -18,7 +18,7 @@ async function excluirMaterial(){
       return;
     }
 
-    const req = await fetch(`http://localhost:3000/api/item/${codigo}`,{//(`https://apicontroledematerial.onrender.com/api/item/${filtroJSON}`,{
+    const req = await fetch(`https://backendcomautenticacao.onrender.com/api/item/${codigo}`,{
          method: "DELETE",
          headers:{"Content-Type": "application/json",
                   'Authorization': `Bearer ${sessionStorage.getItem('token')}`

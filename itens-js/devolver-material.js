@@ -4,6 +4,8 @@ import renderFormItem from "../components/formItem.js";
 import renderMenu from "../components/menuEvents.js";
 import { exibirLista } from "./exibir-lista.js";
 import { inicializar } from "../usuarios-js/login.js";
+
+
 async function devolverMaterial(){
 
     const isLogado = sessionStorage.getItem('token') !== null;
@@ -21,7 +23,7 @@ async function devolverMaterial(){
 
         let dadosJSON = JSON.stringify({"status":dados});
 
-        const req = await fetch(`http://localhost:3000/api/item/${codigo}`,{//(`https://apicontroledematerial.onrender.com/api/item/${filtroJSON}`,{
+        const req = await fetch(`https://backendcomautenticacao.onrender.com/api/item/${codigo}`,{
             method: "PATCH",
             headers:{"Content-Type": "application/json",
                     "Authorization": `Bearer ${sessionStorage.getItem('token')}`

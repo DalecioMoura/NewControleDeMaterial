@@ -49,14 +49,14 @@ function consultarUsuarios(){
 
 async function semFiltro(){
 
-    const req = await fetch(`http://localhost:3000/api/usuarios`, {
+    const req = await fetch(`https://backendcomautenticacao.onrender.com/api/usuarios`, {
         method: 'GET',
         headers:{"Content-Type": "application/json",
                 'Authorization': `Bearer ${sessionStorage.getItem('token')}`
         }
         
 
-    });//('https://apicontroledematerial.onrender.com/api/usuarios');
+    });
     const res = await req.json();
 
     exibirUsuarios(res.result, "Nova Consulta");  
@@ -66,12 +66,12 @@ async function comFiltro(filtro){
 
     const urlParams = new URLSearchParams(filtro);
     
-    const req = await fetch(`http://localhost:3000/api/usuario?${urlParams.toString()}`,{
+    const req = await fetch(`https://backendcomautenticacao.onrender.com/api/usuario?${urlParams.toString()}`,{
         method: 'GET',
         headers:{"Content-Type": "application/json",
             'Authorization': `Bearer ${sessionStorage.getItem('token')}`
         }
-    });//(`https://apicontroledematerial.onrender.com/api/usuario/${filtroJson}`);
+    });
     const res = await req.json();
 
     console.log('resposta: '+res.result);
