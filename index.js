@@ -58,6 +58,21 @@ document.addEventListener('DOMContentLoaded', ()=>{
             window.location.href = '../index.html';
         });
     }
+
+    const ultimasRetiradasSessionStorage = sessionStorage.getItem('itens');
+    const ultimasRetiradas = document.querySelectorAll('.ultimas-retiradas');
+    console.log(ultimasRetiradasSessionStorage);
+    if(ultimasRetiradasSessionStorage != '' && ultimasRetiradasSessionStorage != null){
+        ultimasRetiradasSessionStorage.forEach((item, index) => {
+            ultimasRetiradas[index].textContent = item;
+        });
+    }
+    else{
+        ultimasRetiradas.forEach(item => {
+            item.style.display = 'none';
+        })
+    }
+    
 });
 
 

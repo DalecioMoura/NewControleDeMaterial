@@ -265,7 +265,9 @@ body {
 
 .quick-link-btn {
     display: inline-block;
-    padding: 12px 25px;
+    width: 160px;
+    padding: 12px 5px;
+    margin: 2px;
     background-color: var(--hover-color);
     color: #fff;
     text-decoration: none;

@@ -7,24 +7,26 @@ const htmlComponentDashboard = `
                                             <div class="card">
                                                 <h3>Últimas Retiradas</h3>
                                                 <ul>
-                                                    <li><i class="fas fa-caret-right"></i>Notebook de PED</li>
-                                                    <li><i class="fas fa-caret-right"></i>Caixa de Teste Omicron</li>
-                                                    <li><i class="fas fa-caret-right"></i>Caixa de teste Double</li>
-                                                    <li><i class="fas fa-caret-right"></i>Notebook de TAD</li>
-                                                    <li><i class="fas fa-caret-right"></i>Relé de Proteção 7SA</li>
+                                                    <li class="ultimas-retiradas"><i class="fas fa-caret-right"></i><!--Notebook de PED--></li>
+                                                    <li class="ultimas-retiradas"><i class="fas fa-caret-right"></i><!--Caixa de Teste Omicron--></li>
+                                                    <li class="ultimas-retiradas"><i class="fas fa-caret-right"></i><!--Caixa de teste Double--></li>
+                                                    <li class="ultimas-retiradas"><i class="fas fa-caret-right"></i><!--Notebook de TAD--></li>
+                                                    <li class="ultimas-retiradas"><i class="fas fa-caret-right"></i><!--Relé de Proteção 7SA--></li>
                                                 </ul>
                                             </div>
                                             <div class="card alert">
                                                 <h3>Material em Baixo Estoque</h3>
                                                 <ul>
-                                                    <li><i class="fas fa-exclamation-triangle"></i>Relé de Proteção 7SA</li>
-                                                    <li><i class="fas fa-exclamation-triangle"></i>Caixa de Teste Omicron</li>
+                                                    <li><i class="fas fa-exclamation-triangle"></i>Terminal Pré-isolado 2,5mm²</li>
+                                                    <li><i class="fas fa-exclamation-triangle"></i>Abraçadeira de nilon</li>
                                                     <li><i class="fas fa-exclamation-triangle"></i>Fio 2,5 mm²</li>
                                                 </ul>
                                             </div>
                                             <div class="card access-rapid">
                                                 <h3>Acesso Rápido</h3>
-                                                <a href="" class="quick-link-btn" data-page="cadastrar-material">Cadastrar Material</a>
+                                                <a href="../itens-js/consultar-material.html" class="quick-link-btn" data-page="cadastrar-material">Consultar Material</a>
+                                                <a href="../itens-js/retirar-material.html" class="quick-link-btn" data-page="cadastrar-material">Retirar Material</a>
+                                                <a href="../itens-js/editar-material.html" class="quick-link-btn" data-page="cadastrar-material">Devolver Material</a>
                                             </div>  
                                         </div>
                                     </main>

@@ -40,7 +40,7 @@ async function cadastarMaterial(){
 
       const urlParams = new URLSearchParams({"filtro":'codigo', "valor":dados.codigo});
 
-      const req = await fetch(`https://apicontroledematerial.onrender.com/api/item?${urlParams.toString()}`, {//http://localhost:3000/
+      const req = await fetch(`https://backendcomautenticacao.onrender.com/api/item?${urlParams.toString()}`, {//http://localhost:3000/
          method: 'GET',
          headers:{"Content-Type": "application/json",
                   "Authorization": `Bearer ${sessionStorage.getItem('token')}`
@@ -56,7 +56,7 @@ async function cadastarMaterial(){
       else{
          let dadosJSON = JSON.stringify(dados);
 
-         const req = await fetch('https://apicontroledematerial.onrender.com/api/item',{//http://localhost:3000/
+         const req = await fetch('https://backendcomautenticacao.onrender.com/api/item',{//http://localhost:3000/
             method: "POST",
             headers:{"Content-Type": "application/json",
                      "Authorization": `Bearer ${sessionStorage.getItem('token')}`

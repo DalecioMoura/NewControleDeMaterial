@@ -4,9 +4,12 @@ import renderFormItem from "../components/formItem.js";
 import { exibirLista } from "./exibir-lista.js";
 import renderMenu from "../components/menuEvents.js";
 import { inicializar } from "../usuarios-js/login.js";
+
+console.log(sessionStorage.getItem('itens'));
+
 async function retirarMaterial(){
 
-    const isLogado = sessionStorage.getItem('token') !== null;
+    const isLogado = sessionStorage.getItem('token') !== null;    
 
     if(isLogado){
 
@@ -37,6 +40,23 @@ async function retirarMaterial(){
         });
 
         const res = await req.json();
+        
+        /*const itens={};
+        //itens = sessionStorage.getItem('itens')!==null? stringify(sessionStorage.getItem('itens')) : null;
+
+        if(itens.length<=5){
+            itens.unshift(res.result[0].codigo + ' -> ' + res.result[0].tipo);
+            console.log(itens);
+        }
+        else{
+            itens.pop();
+            itens.unshift(res.result[0].codigo + ' -> ' + res.result[0].tipo);
+            console.log(itens);
+        }*/
+
+        //sessionStorage.setItem('itens', itens);
+        //console.log(itens);
+        //console.log(sessionStorage.getItem('itens'));
         
         console.log('res: ',res);
 
@@ -120,5 +140,4 @@ document.addEventListener('DOMContentLoaded', () => {
     if(btnInicializar){
         btnInicializar.addEventListener('click', () => {inicializar(); });
     }
-
 });
