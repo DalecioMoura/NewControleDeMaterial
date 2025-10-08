@@ -1,11 +1,11 @@
 
  function exibirLista(lista, msg){
 
-        let textElement = ['#', 'Código', 'Descrição', 'Localização', 'Nº serie', 
-                            'Modelo', 'Fabricante', 'Informações adicionais', 'Status'];
+        let textElement = ['#:', 'Código:', 'material', 'Nome:', 'Matricula:', 'Destino:', 
+                            'Retirada:', 'Devolução:'];
 
-        let textClass = ['col-id', 'col-codigo', 'col-tipo', 'col-local', 'col-serie', 
-                            'col-modelo', 'col-fabricante', 'col-descricao', 'col-st'];
+        let textClass = ['col-id', 'col-codigo', 'col-material', 'col-nome', 'col-matricula', 
+                            'col-destino', 'col-retirada', 'col-devolucao'];
     
         //Tagg existente no HTML
         let sectioExibirLista = document.getElementById("section-exibir-lista");

@@ -5,7 +5,37 @@ import renderMenu from "./components/menuEvents.js";
 import renderLogin from "./components/formLogin.js";
 import {fazerLogin, inicializar} from "./usuarios-js/login.js";
 
-document.addEventListener('DOMContentLoaded', ()=>{
+async function ultimasRetiradas(){
+
+    const req = await fetch(`https://backendcomautenticacao.onrender.com/api/ultimoslancamentos`,{
+        method: 'GET',
+        headers:{'Content-Type': 'application/json',
+                "Authorization": `Bearer ${sessionStorage.getItem('token')}`
+        }
+    });
+
+    const res = await req.json();
+    console.log('res: ',res);
+
+    const ultimosItensRetirados = res.result;
+    console.log('res: ',ultimosItensRetirados);
+
+    const elementosUltimasRetiradas = document.querySelectorAll('.ultimas-retiradas');
+    const elementosUltimasRetiradasSpan = document.querySelectorAll('.li-retirada');
+    
+    if(ultimosItensRetirados != '' && ultimosItensRetirados != null){
+        ultimosItensRetirados.forEach((item, index) => {
+            elementosUltimasRetiradasSpan[index].textContent = `${item.material} (${item.codigo})`;
+        });
+    }
+    else{
+        elementosUltimasRetiradas.forEach(item => {
+            item.style.display = 'none';
+        })
+    }
+}
+
+document.addEventListener('DOMContentLoaded', async ()=>{
     renderSidebar();
     renderProfile();
     renderDashboard();
@@ -59,20 +89,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         });
     }
 
-    const ultimasRetiradasSessionStorage = sessionStorage.getItem('itens');
-    const ultimasRetiradas = document.querySelectorAll('.ultimas-retiradas');
-    console.log(ultimasRetiradasSessionStorage);
-    if(ultimasRetiradasSessionStorage != '' && ultimasRetiradasSessionStorage != null){
-        ultimasRetiradasSessionStorage.forEach((item, index) => {
-            ultimasRetiradas[index].textContent = item;
-        });
-    }
-    else{
-        ultimasRetiradas.forEach(item => {
-            item.style.display = 'none';
-        })
-    }
-    
+    await ultimasRetiradas();    
 });
 
 

@@ -1,0 +1,86 @@
+#section-exibir-lista{
+    width: 100%;
+    display: '';
+    text-align: center;
+    margin-left: 0px;
+    
+}
+
+#exibir-lista-div-principal{
+    min-width: 1000px;
+    text-align: center;
+    margin-top: 20px;
+}
+#exibir-lista-div-principal h2{
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.cabecalho{
+  
+    font-weight: bolder;
+}
+
+.cabecalho,
+.lista{
+   
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 2px;
+    background-color: antiquewhite;
+    
+}
+
+.lista{
+    border-bottom: solid 1px;
+    background-color: aliceblue;
+    
+
+}
+
+.col {
+    border: solid 1px;
+    margin: 0 auto;
+    text-align: center;
+    align-content: center;
+    
+}
+
+.col-id{
+    width: 3%;
+}
+
+.col-codigo,
+.col-matricula,
+.col-destino{
+    width: 10%;
+}
+
+.col-material,
+.col-retirada,
+.col-devolucao{
+    width: 15%;
+}
+
+.col-nome{
+    width: 22%;
+}
+
+/*.col-tipo,
+.col-st{
+    width: 14%;  
+}*/
+
+#btn-nova-pesquisa{
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-weight: bolder;
+    font-size:medium;
+
+    /*margin-top: 20px;
+    padding: 10px 15px;*/
+}

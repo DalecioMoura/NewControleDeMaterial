@@ -33,7 +33,7 @@ const htmlComponentSidebar = `
                                         </div>
                                     </li>
                                     <li>
-                                        <a href=""><i class="fas fa-file-alt"></i><span>Relatórios</span></a>
+                                        <a href="../itens-js/retorios.html"><i class="fas fa-file-alt"></i><span>Relatórios</span></a>
                                     </li>
                                 </ul>
                             `;

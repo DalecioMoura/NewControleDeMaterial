@@ -41,23 +41,6 @@ async function retirarMaterial(){
 
         const res = await req.json();
         
-        /*const itens={};
-        //itens = sessionStorage.getItem('itens')!==null? stringify(sessionStorage.getItem('itens')) : null;
-
-        if(itens.length<=5){
-            itens.unshift(res.result[0].codigo + ' -> ' + res.result[0].tipo);
-            console.log(itens);
-        }
-        else{
-            itens.pop();
-            itens.unshift(res.result[0].codigo + ' -> ' + res.result[0].tipo);
-            console.log(itens);
-        }*/
-
-        //sessionStorage.setItem('itens', itens);
-        //console.log(itens);
-        //console.log(sessionStorage.getItem('itens'));
-        
         console.log('res: ',res);
 
         exibirLista(res.result, 'Retirar outro ítem');

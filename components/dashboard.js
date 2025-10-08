@@ -7,11 +7,11 @@ const htmlComponentDashboard = `
                                             <div class="card">
                                                 <h3>Últimas Retiradas</h3>
                                                 <ul>
-                                                    <li class="ultimas-retiradas"><i class="fas fa-caret-right"></i><!--Notebook de PED--></li>
-                                                    <li class="ultimas-retiradas"><i class="fas fa-caret-right"></i><!--Caixa de Teste Omicron--></li>
-                                                    <li class="ultimas-retiradas"><i class="fas fa-caret-right"></i><!--Caixa de teste Double--></li>
-                                                    <li class="ultimas-retiradas"><i class="fas fa-caret-right"></i><!--Notebook de TAD--></li>
-                                                    <li class="ultimas-retiradas"><i class="fas fa-caret-right"></i><!--Relé de Proteção 7SA--></li>
+                                                    <li class="ultimas-retiradas"><i class="fas fa-caret-right"></i><span class="li-retirada"></span><!--Notebook de PED--></li>
+                                                    <li class="ultimas-retiradas"><i class="fas fa-caret-right"></i><span class="li-retirada"></span><!--Caixa de Teste Omicron--></li>
+                                                    <li class="ultimas-retiradas"><i class="fas fa-caret-right"></i><span class="li-retirada"></span><!--Caixa de teste Double--></li>
+                                                    <li class="ultimas-retiradas"><i class="fas fa-caret-right"></i><span class="li-retirada"></span><!--Notebook de TAD--></li>
+                                                    <li class="ultimas-retiradas"><i class="fas fa-caret-right"></i><span class="li-retirada"></span><!--Relé de Proteção 7SA--></li>
                                                 </ul>
                                             </div>
                                             <div class="card alert">
